@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+:root body {
+  width: 100%;
+  height: 100vh;
+  background-color: #ebebeb;
+}
+
+:root body aside {
+  position: fixed;
+  top: 0;
+  padding: 1rem 0 0 1.5rem;
+  width: 15rem;
+  height: 100%;
+  background-color: lightseagreen;
+}
+
+:root body aside h1 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+:root body aside h1 span {
+  margin-right: 2rem;
+}
+
+:root body aside nav ul li {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root body aside nav ul li a {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0 1rem 1rem;
+  border-radius: 30px 0 0 30px;
+  color: #ebebeb;
+}
+
+:root body aside nav ul li a i {
+  margin-right: 2rem;
+}
+
+:root body aside nav ul li a span {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+:root body aside nav ul li a.active, :root body aside nav ul li a:hover {
+  background-color: #ebebeb;
+  color: lightseagreen;
+}
+
+:root body header {
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 15rem);
+  height: 5rem;
+  margin-left: 15rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+:root body header div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root body header div:first-child label {
+  background-color: #ebebeb;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 1rem;
+}
+
+:root body header div:first-child h2 {
+  color: lightseagreen;
+}
+
+:root body header .searchBox {
+  width: 20rem;
+  height: 35px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid lightseagreen;
+  border-radius: 5px;
+}
+
+:root body header .searchBox input {
+  outline: none;
+  background: none;
+  border: none;
+  width: 18rem;
+  border-left: 1px solid lightseagreen;
+  padding: 0 10px;
+}
+
+:root body header .searchBox i {
+  padding: 0 10px 0 15px;
+  cursor: pointer;
+}
+
+:root body header .userDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root body header .userDetails .profilePic {
+  background-color: #ebebeb;
+  height: 40px;
+  width: 40px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+:root body header .userDetails .profilePic img {
+  height: 100%;
+  width: 100%;
+}
+
+:root body header .userDetails .profileInfo p {
+  color: #807a7a;
+}
+
+:root body main {
+  width: calc(100% - 15rem);
+  margin: 5rem 0 0 15rem;
+  min-height: calc(100% - 5rem);
+  padding: 2rem;
+}
+
+:root body main .cardsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+:root body main .cardsContainer .card {
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6rem;
+  border-radius: 5px;
+}
+
+:root body main .cardsContainer .card div:first-child h2 {
+  font-size: 30px;
+  margin-bottom: .6rem;
+}
+
+:root body main .cardsContainer .card div:first-child span {
+  color: #807a7a;
+  font-size: 21px;
+}
+
+:root body main .cardsContainer .card i {
+  font-size: 40px;
+}
+
+:root body main .container {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65% auto;
+      grid-template-columns: 65% auto;
+  grid-gap: 2rem;
+}
+
+:root body main .container .projectsContainer {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+:root body main .container .projectsContainer div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+:root body main .container .projectsContainer div h2 {
+  font-size: 20px;
+}
+
+:root body main .container .projectsContainer div a {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background-color: orangered;
+  color: #ebebeb;
+  border-radius: 10px;
+}
+
+:root body main .container .projectsContainer table {
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+:root body main .container .projectsContainer table thead tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+:root body main .container .projectsContainer table thead tr td {
+  color: orangered;
+  padding: .5rem;
+  font-weight: 700;
+}
+
+:root body main .container .projectsContainer table tbody tr td {
+  padding: .5rem;
+}
+
+:root body main .container .projectsContainer table tbody tr td:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root body main .container .projectsContainer table tbody tr td:last-child span {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-right: .5rem;
+  border-radius: 50%;
+}
+
+:root body main .container .projectsContainer table tbody tr td:last-child span.orange {
+  background-color: orangered;
+}
+
+:root body main .container .projectsContainer table tbody tr td:last-child span.blue {
+  background-color: lightseagreen;
+}
+
+:root body main .container .projectsContainer table tbody tr td:last-child span.green {
+  background-color: green;
+}
+
+:root body main .container .customersContainer {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+:root body main .container .customersContainer div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+:root body main .container .customersContainer div h2 {
+  font-size: 20px;
+}
+
+:root body main .container .customersContainer div a {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background-color: orangered;
+  color: #ebebeb;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

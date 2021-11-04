@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,10 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
 }
 
 :root body {
@@ -95,7 +100,6 @@
 }
 
 :root body header div:first-child label {
-  background-color: #ebebeb;
   width: 20px;
   height: 20px;
   display: -webkit-box;
@@ -164,8 +168,13 @@
   width: 100%;
 }
 
+:root body header .userDetails .profileInfo h3 {
+  font-size: 14px;
+}
+
 :root body header .userDetails .profileInfo p {
   color: #807a7a;
+  font-size: 12px;
 }
 
 :root body main {
@@ -201,7 +210,7 @@
 
 :root body main .cardsContainer .card div:first-child h2 {
   font-size: 30px;
-  margin-bottom: .6rem;
+  margin-bottom: 0rem;
 }
 
 :root body main .cardsContainer .card div:first-child span {
@@ -211,6 +220,23 @@
 
 :root body main .cardsContainer .card i {
   font-size: 40px;
+  color: lightseagreen;
+}
+
+:root body main .cardsContainer .card:last-child {
+  background-color: lightseagreen;
+}
+
+:root body main .cardsContainer .card:last-child div:first-child h2 {
+  color: #fff;
+}
+
+:root body main .cardsContainer .card:last-child div:first-child span {
+  color: #fff;
+}
+
+:root body main .cardsContainer .card:last-child i {
+  color: #ebebeb;
 }
 
 :root body main .container {

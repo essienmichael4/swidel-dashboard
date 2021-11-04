@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +14,8 @@
     $darkTextColor: #040404;
     $accentColor: orangered;
     $secondaryColor: #ebebeb;
+
+    font-family: "Roboto", sans-serif;
 
     body{
         width: 100%;
@@ -91,7 +95,6 @@
                 align-items: center;
 
                 label{
-                    background-color: $secondaryColor;
                     width: 20px;
                     height: 20px;
                     display: flex;
@@ -147,8 +150,13 @@
                 }
 
                 .profileInfo{
+                    h3{
+                        font-size: 14px;
+                    }
+
                     p{
                         color: #807a7a;
+                        font-size: 12px;
                     }
                 }
             }
@@ -156,7 +164,6 @@
     
         main{
             width: calc(100% - 15rem);
-            
             margin: 5rem 0 0 15rem;
             min-height: calc(100% - 5rem);
             // background-color: $accentColor;
@@ -179,7 +186,7 @@
                     div:first-child{
                         h2{
                             font-size: 30px;
-                            margin-bottom: .6rem;
+                            margin-bottom: 0rem;
                         }
 
                         span{
@@ -190,6 +197,26 @@
 
                     i{
                         font-size: 40px;
+                        color: $primaryColor;
+                    }
+                }
+
+                .card:last-child{
+                    background-color: $primaryColor;
+
+                    div:first-child{
+                        h2{
+                            
+                            color: #fff;
+                        }
+
+                        span{
+                            color: #fff;
+                        }
+                    }
+
+                    i{
+                        color: $secondaryColor;
                     }
                 }
             }

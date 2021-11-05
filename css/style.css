@@ -18,6 +18,15 @@
   background-color: #ebebeb;
 }
 
+:root body #navbar:checked ~ aside {
+  width: 4rem;
+  padding-left: 1rem;
+}
+
+:root body #navbar:checked ~ aside h1 span, :root body #navbar:checked ~ aside nav ul li a span {
+  display: none;
+}
+
 :root body aside {
   position: fixed;
   top: 0;
@@ -25,15 +34,19 @@
   width: 15rem;
   height: 100%;
   background-color: lightseagreen;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 :root body aside h1 {
   text-transform: uppercase;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
+  max-height: 43px;
+  overflow: hidden;
 }
 
-:root body aside h1 span {
+:root body aside h1 i {
   margin-right: 2rem;
 }
 
@@ -49,10 +62,12 @@
 
 :root body aside nav ul li a {
   width: 100%;
+  max-height: 50px;
   display: inline-block;
   padding: 1rem 0 1rem 1rem;
   border-radius: 30px 0 0 30px;
   color: #ebebeb;
+  overflow: hidden;
 }
 
 :root body aside nav ul li a i {
@@ -67,6 +82,11 @@
 :root body aside nav ul li a.active, :root body aside nav ul li a:hover {
   background-color: #ebebeb;
   color: lightseagreen;
+}
+
+:root body #navbar:checked ~ header {
+  width: calc(100% - 4rem);
+  margin-left: 4rem;
 }
 
 :root body header {
@@ -88,6 +108,8 @@
           justify-content: space-between;
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 :root body header div:first-child {
@@ -177,11 +199,18 @@
   font-size: 12px;
 }
 
+:root body #navbar:checked ~ main {
+  width: calc(100% - 4rem);
+  margin-left: 4rem;
+}
+
 :root body main {
   width: calc(100% - 15rem);
   margin: 5rem 0 0 15rem;
   min-height: calc(100% - 5rem);
   padding: 2rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 :root body main .cardsContainer {
@@ -252,6 +281,8 @@
   padding: 2rem;
   background-color: #fff;
   border-radius: 5px;
+  -webkit-box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 :root body main .container .projectsContainer div {
@@ -277,6 +308,11 @@
   background-color: orangered;
   color: #ebebeb;
   border-radius: 10px;
+}
+
+:root body main .container .projectsContainer div a i {
+  margin-left: .5rem;
+  font-size: 12px;
 }
 
 :root body main .container .projectsContainer table {
@@ -330,12 +366,17 @@
 }
 
 :root body main .container .customersContainer {
+  max-height: 400px;
+  overflow-y: auto;
   padding: 2rem;
   background-color: #fff;
   border-radius: 5px;
+  -webkit-box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+  scrollbar-width: none;
 }
 
-:root body main .container .customersContainer div {
+:root body main .container .customersContainer .header {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,17 +387,83 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: .5rem;
 }
 
-:root body main .container .customersContainer div h2 {
+:root body main .container .customersContainer .header h2 {
   font-size: 20px;
 }
 
-:root body main .container .customersContainer div a {
+:root body main .container .customersContainer .header a {
   display: inline-block;
   padding: .5rem 1rem;
   background-color: orangered;
   color: #ebebeb;
   border-radius: 10px;
+}
+
+:root body main .container .customersContainer .header a i {
+  margin-left: .5rem;
+  font-size: 12px;
+}
+
+:root body main .container .customersContainer .customerCard {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .5rem 0 0 0;
+}
+
+:root body main .container .customersContainer .customerCard .profilePic {
+  background-color: orangered;
+  height: 40px;
+  width: 40px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+:root body main .container .customersContainer .customerCard .profilePic img {
+  height: 100%;
+  width: 100%;
+}
+
+:root body main .container .customersContainer .customerCard .profileInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+:root body main .container .customersContainer .customerCard .profileInfo h3 {
+  font-size: 14px;
+}
+
+:root body main .container .customersContainer .customerCard .profileInfo p {
+  color: #807a7a;
+  font-size: 12px;
+}
+
+:root body main .container .customersContainer .customerCard .socials {
+  margin-left: 30px;
+}
+
+:root body main .container .customersContainer .customerCard .socials i {
+  color: orangered;
+  margin: 0 .1rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+:root body main .container .customersContainer::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
